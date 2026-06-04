@@ -14,10 +14,10 @@ L'obiettivo di questo modulo è dimostrare come l'assunzione di una "rete intern
 
 Rispetto alle configurazioni tradizionali, l'ambiente è stato rifattorizzato per simulare uno scenario enterprise realistico:
 
-1. **OWASP A01:2021 - Broken Access Control (Arbitrary File Read / Path Traversal):**
+1. **OWASP - Broken Access Control (Arbitrary File Read / Path Traversal):**
    L'endpoint dell'API `/api/v1/config?file=` non esegue la sanificazione dei parametri di input. Un utente malintenzionato in grado di parlare con l'API può risalire l'albero delle directory (`../`) per leggere file sensibili di sistema e applicativi.
 
-2. **OWASP A05:2021 - Security Misconfiguration (Hardcoded Credentials):**
+2. **OWASP - Security Misconfiguration (Hardcoded Credentials):**
    Il codice sorgente del microservizio Flask (`app.py`) ospita in chiaro le credenziali di root del database MySQL (`db_admin`), violando le linee guida di gestione sicura dei segreti applicativi.
 
 ## ⚙️ Setup e Deployment dell'Ambiente
