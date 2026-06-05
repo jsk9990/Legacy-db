@@ -15,6 +15,10 @@ CREATE USER IF NOT EXISTS 'db_admin'@'10.10.10.20' IDENTIFIED BY 'PasswordSicura
 GRANT ALL PRIVILEGES ON legacy_db.* TO 'db_admin'@'10.10.10.20';
 FLUSH PRIVILEGES;
 
+CREATE USER IF NOT EXISTS 'db_admin'@'localhost' IDENTIFIED BY 'PasswordSicuraAziendale2026!';
+GRANT ALL PRIVILEGES ON legacy_db.* TO 'db_admin'@'localhost';
+FLUSH PRIVILEGES;
+
 -- 3. Tabella Target per Ransomware/Esfiltrazione (Dati Sensibili Aziendali in Chiaro)
 CREATE TABLE dati_aziendali_sensibili (
     id INT AUTO_INCREMENT PRIMARY KEY,
