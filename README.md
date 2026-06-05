@@ -27,7 +27,7 @@ Per ripristinare la macchina allo stato iniziale ("Golden Image"):
 1. **Installazione dipendenze e Database:**
 ```bash
    sudo apt update
-   sudo apt install mysql-server python3-flask python3-pip -y
+   sudo apt install mysql-server python3-flask python3-pip python3-pymysql -y
 ```
 
 2. **Configurazione di Rete di MySQL:**
